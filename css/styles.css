@@ -1,0 +1,317 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/* Navigation Bar */
+header {
+    background-color:black;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure the header stays on top */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+/* Mobile Menu Button */
+.menu-btn {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+/* Home Section */
+#home {
+    background: #B7E0FF;
+    padding: 30px 20px; /* Reduced padding for the home section */
+    text-align: left; /* Align text to the left */
+    position: relative;
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space between content and profile pic */
+    height: 50vh; /* Reduced height of the home section */
+}
+
+.home-content {
+    flex: 1; /* Allow the content to take available space */
+    margin-right: 20px; /* Space between content and profile picture */
+}
+
+.profile-pic {
+    margin-left: auto; /* Push the profile picture to the right */
+    
+}
+
+.profile-pic img {
+    width: 250px; /* Adjust size as needed */
+    height: px;
+    border-radius:10% ;
+    border: 3px solid #333;
+}
+
+h1 {
+    color: #333;
+    font-size: 36px;
+}
+
+h3 .text{
+    color:#74512D;
+}
+.resume-button {
+    display: inline-block;
+    margin-top: 20px; /* Adjust spacing as needed */
+    padding: 10px 20px;
+    background-color:#001F3F; /* Bootstrap primary color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+    background-color:#001F3F; /* Darker blue on hover */
+}
+.btn-box{
+    display: inline-block;
+    margin-top: 20px; /* Adjust spacing as needed */
+    padding: 10px 20px;
+    background-color:#001F3F; /* Bootstrap primary color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+/* Social Icons */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    font-size: 24px;
+    color:black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color:#1DA1F2; /* LinkedIn color */
+}
+
+.social-icon i.fa-twitter:hover {
+    color: #1DA1F2;
+}
+
+.social-icon i.fa-github:hover {
+    color: #333;
+}
+/* About, Skills, and Contact Sections */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+#about{
+    background-color: #FFF5CD;
+}
+#skills{
+    background-color: #FFCFB3;
+}
+#contact{
+    background-color:#E78F81
+}
+
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+#skills li {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    background-color: #EDDFE0;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+    position: relative;
+    width: 100%;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide the navbar for smaller screens */
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px; /* Below the header */
+        right: 0;
+        text-align: right;
+    }
+
+    nav ul.show {
+        display: flex; /* Show the navbar when in mobile mode */
+    }
+
+    nav ul li {
+        margin: 0;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .menu-btn {
+        display: block; /* Show the menu button on small screens */
+    }
+}
+#contact {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center the form horizontally */
+    align-items: center; /* Center the form vertically */
+    flex-direction: column; /* Stack elements vertically */
+    height: 70vh; /* Optional: make contact section full height */
+    text-align: center; /* Center text in the contact section */
+}
+
+.form-container {
+    display: inline-block; /* Prevents the box from expanding full width */
+    background-color: #f4f4f4; /* Background color of the form box */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding around the form */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    margin-top: 20px; /* Space above the form box */
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Fixed width for the form */
+}
+
+#contact-form input,
+#contact-form textarea {
+    margin-bottom: 10px; /* Space between inputs */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact-form button {
+    padding: 10px;
+    background-color: #001F3F; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #001F3F; /* Darker blue on hover */
+}
+/* Mini Projects Section Styles */
+#projects {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #CEDF9F;
+}
+
+#projects h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* Flexbox container for project cards */
+.projects-container {
+    display: flex;
+    justify-content: center; /* Centers the cards horizontally */
+    gap: 20px; /* Space between cards */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Card style for each project */
+.project-card {
+    background-color: #FEFAE0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px; /* Adjust the width as needed */
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow effect */
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.project-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #001F3F;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-button:hover {
+    background-color: #001F3F;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+        align-items: center; /* Centers the cards vertically */
+    }
+}
